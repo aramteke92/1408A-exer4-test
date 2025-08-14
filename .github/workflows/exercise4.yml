@@ -1,5 +1,8 @@
 name: buildfork
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
 
