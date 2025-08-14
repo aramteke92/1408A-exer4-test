@@ -49,7 +49,7 @@ jobs:
       url: http://illustrious-help.surge.sh
     steps:
       - name: download build artifacts
-        uses: actions/download-artifacts@v4.3.0
+        uses: actions/download-artifact@v4
         with:
           name: build
 
@@ -58,5 +58,3 @@ jobs:
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-
-   
