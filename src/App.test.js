@@ -1,8 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the seafood recipe page correctly', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  // Check for the main title
+  expect(screen.getByText(/delicious seafood paella/i)).toBeInTheDocument();
+  // Check for subtitle
+  expect(screen.getByText(/a flavorful and easy-to-make seafood recipe/i)).toBeInTheDocument();
+  // Optional: check for ingredients or steps
 });
